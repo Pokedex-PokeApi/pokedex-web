@@ -33,7 +33,7 @@ export default function Card({ pokemon }: ICardProps) {
         </div>
       </header>
       <main>
-        <div className="container-image">
+        <div className={styles.containerImage}>
           <Image className={styles.imagePokemon} src={`${pokemon.id}`} loader={imagePokemonById} alt="Charizard" width={'100'} height={'100'}/>
         </div>
       </main>

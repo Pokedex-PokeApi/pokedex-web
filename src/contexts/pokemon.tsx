@@ -20,20 +20,20 @@ const PokemonProvider = ({ children }: IPokemonProvider) => {
   const [pokemons, setPokemons] = useState<TPokemon[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const loadPokemons = useCallback(async (limit: number = 151, offset: number = 0) => {
+  const loadPokemons = useCallback(async (limit: number = 20, offset: number = 0) => {
     try {
       setLoading(true);
-      const response = await api().get<TPokemon[]>("/pokemons", { params: { limit, offset }});
+      const response = await api().get<TPokemon[]>(`/pokemons?limit=${limit}&offset=${offset}`);
       if(response.status != 200)
         throw response
 
-      setPokemons(response.data)
+      setPokemons(pokemons.concat(response.data))
     } catch (error: any) {
       new Error(error)
     }finally{
       setLoading(false);
     }
-  },[])
+  },[pokemons])
   
   return (
     <PokemonContext.Provider value={{
@@ -43,6 +43,7 @@ const PokemonProvider = ({ children }: IPokemonProvider) => {
     }}>
       {children}
     </PokemonContext.Provider>
+
   )
 }
 

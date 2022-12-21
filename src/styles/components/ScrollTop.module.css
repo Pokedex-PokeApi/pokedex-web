@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--pokedex-neutral-smoother);
+    color: var(--pokedex-neutral-strongest);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.svg {
+    color: var(--pokedex-neutral-strongest);
+}
