@@ -1,0 +1,84 @@
+:root {
+  --pokedex-primary: #FFF159;
+  --pokedex-blue: #3483fa;
+  --pokedex-neutral-strong: #353546;
+  --pokedex-neutral-stronger: #23242f;
+  --pokedex-neutral-strongest: #13141b;
+  --pokedex-neutral-medium: #8f8f9a;
+  --pokedex-neutral-smooth: #caced4;
+  --pokedex-neutral-smoother: #e7eaee;
+  --pokedex-neutral-smoothest: #ffffff;
+  --pokedex-feedback-success: #0fef83;
+  --pokedex-feedback-info: #57D6F8;
+  --pokedex-feedback-positive: #86ffc5;
+  --pokedex-feedback-warning: #f0960f;
+  --pokedex-feedback-negative: #e66f87;
+  --pokedex-feedback-error: #d30d48;
+  --pokedex-font-family-roboto: "Roboto",sans-serif;
+  --pokedex-font-family-montserrat: "Montserrat",sans-serif;
+  --pokedex-font-size-small: 1.2rem;
+  --pokedex-font-size-default: 1.6rem;
+  --pokedex-font-size-huge: 1.8rem;
+  --pokedex-font-size-tiny: 2.4rem;
+  --pokedex-spacing-small: 1rem;
+  --pokedex-spacing-default: 1.2rem;
+  --pokedex-spacing-vertical: 1.2rem 0;
+  --pokedex-spacing-horizontal: 0 1.2rem;
+  --pokedex-spacing-huge: 2.4rem;
+  --pokedex-spacing-tiny: 3rem;
+  --pokedex-border-radius-default: 1.2rem;
+
+  --type-grass: #339933;
+  --type-bug: #52b936;
+  --type-electric: #bec20e;
+  --type-fighting: #cb0000;
+  --type-fire: #ff8400;
+  --type-ground: #946300;
+  --type-rock: #8d8e66;
+  --type-normal: #848484;
+  --type-poison: #9d00ff;
+  --type-ghost: #692096;
+  --type-psychic: #cc6df5;
+  --type-fairy: #e2adf9;
+  --type-flying: #a1e5f6;
+  --type-ice: #4adbff;
+  --type-water: #00bfff;
+  --type-dragon: #006eff;
+  --type-dark: #2c343f;
+  --type-steel: #565d66;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  height: 100%;
+}
+
+body {
+  font-family: var(--pokedex-font-family-roboto);
+  font-weight: 400;
+  background: var(--pokedex-neutral-strong);
+  color: var(--pokedex-neutral-strong);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--pokedex-font-size-default);
+}
+
+body, input, button {
+  font-size: var(--pokedex-font-size-default);
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+}
